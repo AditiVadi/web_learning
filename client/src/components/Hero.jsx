@@ -1,5 +1,5 @@
 import styles from "../style";
-import { discount, hero } from "../assets";
+import { discount, hero,hero2,hero3 } from "../assets";
 import GetStarted from "./GetStarted";
 
 const Hero = () => {
@@ -13,9 +13,9 @@ const Hero = () => {
           Empowering Students With<br className="sm:block hidden" />{" "}
             <span className="text-teal-500">Personalized</span>{" "}
           </h1>
-          <div className="ss:flex hidden md:mr-4 mr-0">
+          {/* <div className="ss:flex hidden md:mr-4 mr-0">
             <GetStarted />
-          </div>
+          </div> */}
         </div>
 
         <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-black ss:leading-[100.8px] leading-[75px] w-full">
@@ -27,7 +27,7 @@ const Hero = () => {
       </div>
 
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-        <img src={hero} alt="billing" className="w-[100%] h-[100%] relative z-[5]" />
+        <img src={hero3} style={{backgroundColor:'transparent'}} alt="billing" className="w-[100%] h-[100%] relative z-[5]" />
 
         {/* gradient start */}
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />

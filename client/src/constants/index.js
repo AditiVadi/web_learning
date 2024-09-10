@@ -1,42 +1,46 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star,star2,shield2,send2  } from "../assets";
 
 export const navLinks = [
   {
-    id: "home",
+    id: "",
     title: "Home",
   },
+  // {
+  //   id: "features",
+  //   title: "Features",
+  // },
   {
-    id: "features",
-    title: "Features",
-  },
-  {
-    id: "product",
+    id: "allalumni",
     title: "All Alumni",
   },
   {
     id: "clients",
     title: "Discussion Forum",
   },
+  {
+    id: "clients",
+    title: "Events",
+  },
 ];
 
 export const features = [
   {
     id: "feature-1",
-    icon: star,
+    icon: star2,
     title: "Profile Features",
     content:
       "Alumni profiles include personal and educational information, making it easy for juniors to filter and find relevant mentors.",
   },
   {
     id: "feature-2",
-    icon: shield,
+    icon: shield2,
     title: "100% Secured",
     content:
       "We take proactive steps make sure your information and your profile are secure.",
   },
   {
     id: "feature-3",
-    icon: send,
+    icon: send2,
     title: "Real-Time Communication",
     content:
       "Enables real-time interactions through video calls and AI-driven chatbots.",
@@ -73,7 +77,7 @@ export const feedback = [
 export const stats = [
   {
     id: "stats-1",
-    title: "User Active",
+    title: "Active Users",
     value: "3800+",
   },
   {
@@ -83,8 +87,8 @@ export const stats = [
   },
   {
     id: "stats-3",
-    title: "Students",
-    value: "$230M+",
+    title: "Alumni",
+    value: "2000+",
   },
 ];
 

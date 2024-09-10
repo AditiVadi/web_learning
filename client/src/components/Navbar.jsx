@@ -2,25 +2,28 @@ import { useState } from "react";
 
 import { close, logo, menu } from "../assets";//change
 import { navLinks } from "../constants";
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
+  const navigate = useNavigate();
+
 
   return (
     <nav style={{height:'70px',paddingRight:'30px'}} className="w-full fixed top-0 left-0 z-50 flex py-6 justify-between items-center navbar backdrop-blur-lg bg-white/10">
-  <img src={logo} alt="Nexara" className="w-[134px] h-[62px]" />
+  <img onClick={()=>navigate("/")} style={{cursor:'pointer'}} src={logo} alt="Nexara" className="w-[134px] h-[62px]" />
 
   <ul className="list-none sm:flex hidden justify-end items-center flex-1">
     {navLinks.map((nav, index) => (
       <li
         key={nav.id}
-        className={`font-poppins font-normal cursor-pointer text-[16px] ${
+        className={`font-poppins font-normal cursor-pointer text-[16px] hover:text-teal-500 ${
           active === nav.title ? "text-black" : "text-dimblack"
         } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
         onClick={() => setActive(nav.title)}
       >
-        <a href={`#${nav.id}`}>{nav.title}</a>
+        <a href={`/${nav.id}`}>{nav.title}</a>
       </li>
     ))}
   </ul>
@@ -55,12 +58,13 @@ const Navbar = () => {
   </div>
   <button
     style={{
+      color:'white',
       marginLeft: "200px",
       backgroundColor: "#009688",
       paddingInline: "2.5%",
       paddingBlock: "10px",
       borderRadius: "10px",
-      fontWeight: "bold",
+      // fontWeight: "bold",
     }}
   >
     Login
